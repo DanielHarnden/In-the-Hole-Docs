@@ -1,0 +1,30 @@
+img 
+{
+    clear: both;
+    vertical-align: middle;
+    width: 48px;
+    margin: 0 0 0.4rem 0.4rem;
+    image-rendering: pixelated;
+}
+
+a[href$=".png"] > img
+{
+    clear: both;
+    width: 64px;
+    margin: 0 0 0.4rem 0.4rem;
+    image-rendering: pixelated;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.cat-fruit {
+    color: #24822d;
+    font-weight: bold;
+}
+
+.rarity-common {
+    color: #4c6faf;
+    font-weight: bold;
+}

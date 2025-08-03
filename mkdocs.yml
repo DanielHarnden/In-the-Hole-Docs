@@ -1,0 +1,35 @@
+site_name: In the Hole Documentation
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+  
+nav:
+  - index.md
+  - Slot Machine:
+    - icons.md
+    - payouts.md
+  - Terrain:
+    - index.md
+  - Player:
+    - player.md
+    - items.md
+  - Misc.:
+    - json_loader.md
