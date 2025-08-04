@@ -1,5 +1,8 @@
 site_name: In the Hole Documentation
 
+theme:
+  name: material
+
 extra_css:
   - stylesheets/extra.css
 
@@ -20,16 +23,21 @@ markdown_extensions:
   - toc:
       permalink: true
 
-  
 nav:
   - index.md
+  - Player:
+    - player/player.md
+    - player/stamina_component.md
+    - player/movement_component.md
+    - player/digging_component.md
   - Slot Machine:
     - icons.md
     - payouts.md
   - Terrain:
-    - index.md
-  - Player:
-    - player.md
+    - world_generation.md
+  - Shop:
     - items.md
+    - crafting.md
   - Misc.:
+    - misc_dev.md
     - json_loader.md

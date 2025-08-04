@@ -1,10 +1,5 @@
 # Home
 
-This is documentation for the hit 2026 video game In the Hole.
+*In the Hole* is made in Godot by Daniel Harnden and Zoe Mantle.
 
-## What is This and Why
-
-## Project Naming Schemes
-
-## Project Organization
-
+Use the sidebar or the search bar to navigate this wiki.
