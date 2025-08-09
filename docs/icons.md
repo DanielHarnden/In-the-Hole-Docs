@@ -1,66 +1,82 @@
 # Icons
 
-Icons are the main mechanic of the slot machine. Different combinations of icons provide different [payouts](payouts.md), and can provide money or [items](items.md). 
-<br><br>
+Icons are the main mechanic of the slot machine. Different combinations of icons provide different [payouts](payouts.md).
 
 
 
-## Default Icons
-The slot machine starts with 7 icons:
-    ![Cherry](images/icon_cherry.png)
-    ![Grapes](images/icon_grapes.png)
-    ![Lemon](images/icon_lemon.png)
-    ![Cornucopia](images/icon_cornucopia.png)
-    ![Spoon](images/icon_spoon.png)
-    ![Joker](images/icon_joker.png)
-    ![Mafia Man](images/icon_mafia_man.png)
-<br><br>
+## List of Icons
+
+### ![Organic](images/icons/category_organic.png) Organic Icons
+<div class="grid cards" markdown>
+- [![](images/icon_cherry.png)Wood](index.md)
+- [![](images/icon_cherry.png)Sap](index.md)
+- [![](images/icon_cherry.png)Vine](index.md)
+- [![](images/icon_cherry.png)Mushroom](index.md)
+- [![](images/icon_cherry.png)Glowing Mushroom](index.md)
+</div>
+
+### ![Mineral](images/icons/category_mineral.png) Mineral Icons
+<div class="grid cards" markdown>
+- [![](images/icon_cherry.png)Dirt](index.md)
+- [![](images/icon_cherry.png)Sand](index.md)
+- [![](images/icon_cherry.png)Ruby](index.md)
+- [![](images/icon_cherry.png)Sapphire](index.md)
+- [![](images/icon_cherry.png)Emerald](index.md)
+</div>
+
+### ![Metal](images/icons/category_metal.png) Metal Icons
+<div class="grid cards" markdown>
+- [![](images/icon_cherry.png)Copper](index.md)
+- [![](images/icon_cherry.png)Tin](index.md)
+- [![](images/icon_cherry.png)Iron](index.md)
+- [![](images/icon_cherry.png)Sulfur](index.md)
+- [![](images/icon_cherry.png)Gold](index.md)
+- [![](images/icon_cherry.png)Silver](index.md)
+- [![](images/icon_cherry.png)Platinum](index.md)
+- [![](images/icon_cherry.png)Cobalt](index.md)
+- [![](images/icon_cherry.png)Tungsten](index.md)
+- [![](images/icon_cherry.png)Uranium](index.md)
+</div>
+
+### ![Relic](images/icons/category_relic.png) Relic Icons
+<div class="grid cards" markdown>
+- [![](images/icon_joker.png)Ancient Coin](index.md)
+- [![](images/icon_joker.png)Human Skull](index.md)
+- [![](images/icon_joker.png)Plastic](index.md)
+- [![](images/icon_joker.png)Pottery Sherd](index.md)
+- [![](images/icon_joker.png)Pterosaur Fossil](index.md)
+- [![](images/icon_joker.png)Tyrannosauridae Fossil](index.md)
+</div>
+
+### ![Alien](images/icons/category_alien.png) Alien Icons
+<div class="grid cards" markdown>
+- [![](images/icon_joker.png)Alien Egg](index.md)
+- [![](images/icon_joker.png)Alien Skull](index.md)
+- [![](images/icon_joker.png)Broken Alien Weapon](index.md)
+- [![](images/icon_joker.png)UFO Hull Piece](index.md)
+</div>
+
+### ![Wild](images/icons/category_wild.png) Wild Icons
+Only one of each wild icon can be in the slot machine at one time.
+<div class="grid cards" markdown>
+- [![](images/icon_joker.png)Clown](index.md)
+- [![](images/icon_joker.png)Joker](index.md)
+- [![](images/icon_joker.png)Jokesmith](index.md)
+- [![](images/icon_joker.png)Prankster](index.md)
+</div>
+
+### ![Curse](images/icons/category_curse.png) Curse Icons
+<div class="grid cards" markdown>
+- [![](images/icon_mafia_man.png)Bomb](index.md)
+- [![](images/icon_mafia_man.png)Durian](index.md)
+- [![](images/icon_mafia_man.png)Loan Shark](index.md)
+- [![](images/icon_mafia_man.png)Mafia Man](index.md)
+- [![](images/icon_mafia_man.png)Wraith](index.md)
+</div>
 
 
 
-## Icon Types
-<span class="cat-fruit">Fruit</span> icons give the player money for the current run. 
-<br>
-
-<span class="cat-weapon">Weapon</span> and <span class="cat-ability">Ability</span> icons give the player [items](items.md) for the current run.
-<br>
-
-<span class="cat-wild">Wild</span> icons count as every icon at the same time, excluding wild icons and curse icons.
-<br>
-
-<span class="cat-curse">Curse</span> icons negatively impact the player by adding to their debt, removing icons, or adding additional curse icons.
-<br><br>
-
-
-
-## Icon Rarity
-Each icon has a `rarity` value defined in its metadata, represented as an integer. This integer maps to a named rarity (e.g., **Common**, **Uncommon**, etc.) for ease of communication. Additionally, each rarity is assigned a `commonality` value that determines how likely it is to appear in the slot machine. Items can alter an item's commonality.
-
-When the reels are reset, a weighted reel pool is built based on these commonality values. For example, if **Common** has a commonality of 5 and **Rare** has a commonality of 1, the chance of selecting a **Common** icon is 5/6, while **Rare** has a 1/6 chance.
-
-| Rarity Variable | Rarity Name | Rarity Commonality |
-| :-------------: | :---------: | :----------------: |
-| 1 | <span class="rarity-common">Common</span> | 50 |
-| 2 | <span class="rarity-uncommon">Uncommon</span> | 35 |
-| 3 | <span class="rarity-rare">Rare</span> | 14 |
-| 4 | <span class="rarity-legendary">Legendary</span> | 1 |
-
-<br><br>
-
-
-
-## Icon List
-| Icon | Category | Rarity |
-| :--: | :------: | :----: |
-| ![Cherry](images/icon_cherry.png)<br>Cherry | <span class="cat-fruit">Fruit</span> | <span class="rarity-common">Common</span> |
-| ![Grapes](images/icon_grapes.png)<br>Grapes | <span class="cat-fruit">Fruit</span> | <span class="rarity-uncommon">Uncommon</span> |
-| ![Lemon](images/icon_lemon.png)<br>Lemon | <span class="cat-fruit">Fruit</span> | <span class="rarity-rare">Rare</span> |
-| ![Cornucopia](images/icon_cornucopia.png)<br>Cornucopia | <span class="cat-fruit">Fruit</span> | <span class="rarity-legendary">Legendary</span> |
-| ![Spoon](images/icon_spoon.png)<br>Spoon | <span class="cat-weapon">Weapon</span> | <span class="rarity-uncommon">Uncommon</span> |
-| ![Joker](images/icon_joker.png)<br>Joker | <span class="cat-wild">Wild</span> | <span class="rarity-legendary">Legendary</span> |
-| ![Mafia Man](images/icon_mafia_man.png)<br>Mafia Man | <span class="cat-curse">Curse</span> | <span class="rarity-rare">Rare</span> |
-
-<br>
+## Modding Tutorial
 
 
 
@@ -70,27 +86,21 @@ Icons are imported from `.json` files located in the `res://Data/Icons` folder. 
 
 ``` json
 tag                 Required. If missing, the icon will NOT be imported.
-category            Recommended. If missing, defaults to "NULL".
-set                 Recommended. If missing, defaults to "NULL".
-rarity              Recommended. Defaults to -1.
+category            Required. If missing, the icon will NOT be imported.
 
 name                Optional. Defaults to "icon/[tag]".
 category_name       Optional. Defaults to "category/[category]".
 set_name            Optional. Defaults to "set/[set]".
-texture             Optional. Defaults to "res://Data/Icons/Sprites/icon_[tag].png". If missing, a NULL texture is assigned.
-in_machine          Optional. Defaults to "false".
+texture             Optional. Defaults to "res://Slot Machine/Assets/Sprites/Icons/icon_[tag].png". If missing, a NULL texture is assigned.
 ```
-***Note***: `name`, `category_name`, and `set_name` are expected to correspond to localization keys. If not present in `localization.csv`, they may appear incorrectly in-game.
+***Note***: `name` and `category_name` are expected to correspond to localization keys. If not present in `localization.csv`, they may appear incorrectly in-game.
 
 Here is an example of an icon in a `.json` file:
 ``` json
 {
     {
-        "tag" : "cherry",
-        "category" : "fruit",
-        "set" : "set_1",
-        "rarity" : 1,
-        "in_machine" : true,
+        "tag" : "wood",
+        "category" : "organic",
     }
 }
 ```
