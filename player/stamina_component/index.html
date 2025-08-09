@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../player/">
+      
+      
+        <link rel="next" href="../movement_component/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Stamina Component - In the Hole Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stamina-component" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="In the Hole Documentation" class="md-header__button md-logo" aria-label="In the Hole Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            In the Hole Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stamina Component
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="In the Hole Documentation" class="md-nav__button md-logo" aria-label="In the Hole Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    In the Hole Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Player
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Player
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Player
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Stamina Component
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stamina Component
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#float-cap_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - cap_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-max_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - max_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-cur_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - cur_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-sprint_drain_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - sprint_drain_speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-regen_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - regen_speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-stamina_drained" class="md-nav__link">
+    <span class="md-ellipsis">
+      bool - stamina_drained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-updatedelta-float-draining-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - update(delta : float, draining : bool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_curamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_cur(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_maxamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_max(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_capamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_cap(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-drain" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - drain()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - restore()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_max_staminacap-float-max-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_max_stamina(cap : float, max : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_cur_staminacap-float-cur-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_cur_stamina(cap : float, cur : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_stamina_draineddrained-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_stamina_drained(drained : bool)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../movement_component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Movement Component
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digging_component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digging Component
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Slot Machine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Slot Machine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../payouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Payouts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terrain
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Terrain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../world_generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Shop
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Shop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Items
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crafting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Misc.
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Misc.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc_dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Misc. Dev Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../json_loader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Loader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#float-cap_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - cap_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-max_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - max_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-cur_stamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - cur_stamina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-sprint_drain_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - sprint_drain_speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-regen_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      float - regen_speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-stamina_drained" class="md-nav__link">
+    <span class="md-ellipsis">
+      bool - stamina_drained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-updatedelta-float-draining-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - update(delta : float, draining : bool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_curamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_cur(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_maxamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_max(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-add_capamount-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - add_cap(amount : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-drain" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - drain()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      void - restore()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_max_staminacap-float-max-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_max_stamina(cap : float, max : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_cur_staminacap-float-cur-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_cur_stamina(cap : float, cur : float)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_stamina_draineddrained-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_stamina_drained(drained : bool)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stamina-component">Stamina Component<a class="headerlink" href="#stamina-component" title="Permanent link">&para;</a></h1>
+<p>The stamina component is of class <code>StaminaComponent</code> and handles the player's stamina state. It provides functions to update the stamina cap, maximum stamina, and current stamina.</p>
+<p>The stamina component also manages the player's sprinting state.</p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;"><a href="#float-cap_stamina"><code>cap_stamina</code></a></td>
+<td style="text-align: left;">100.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;"><a href="#float-max_stamina"><code>max_stamina</code></a></td>
+<td style="text-align: left;"><a href="#float-cap_stamina"><code>cap_stamina</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;"><a href="#float-cur_stamina"><code>cur_stamina</code></a></td>
+<td style="text-align: left;"><a href="#float-cap_stamina"><code>cap_stamina</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;"><a href="#float-sprint_drain_speed"><code>sprint_drain_speed</code></a></td>
+<td style="text-align: left;">10.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;"><a href="#float-regen_speed"><code>regen_speed</code></a></td>
+<td style="text-align: left;">5.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><a href="#bool-stamina_drained"><code>stamina_drained</code></a></td>
+<td style="text-align: left;">false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Return</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-updatedelta-float-draining-bool"><code>update(delta : float, draining : bool)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-add_curamount-float"><code>add_cur(amount : float)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-add_maxamount-float"><code>add_max(amount : float)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-add_capamount-float"><code>add_cap(amount : float)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-drain"><code>drain()</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">void</td>
+<td style="text-align: left;"><a href="#void-restore"><code>restore()</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="signals">Signals<a class="headerlink" href="#signals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="#update_max_staminacap-float-max-float"><code>update_max_stamina(cap : float, max : float)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#update_cur_staminacap-float-cur-float_1"><code>update_cur_stamina(cap : float, cur : float)</code></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#update_stamina_draineddrained-bool_1"><code>update_stamina_drained(drained : bool)</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="property-descriptions">Property Descriptions<a class="headerlink" href="#property-descriptions" title="Permanent link">&para;</a></h2>
+<h3 id="float-cap_stamina"><code>float</code> - <code>cap_stamina</code><a class="headerlink" href="#float-cap_stamina" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The absolute maximum stamina the player can have.</li>
+<li>This is different from <code>max_stamina</code> because <code>max_stamina</code> fluctuates often from digging, items, and abilities.</li>
+<li>This is denoted by the entire stamina bar (black, yellow, and green).</li>
+</ul>
+<h3 id="float-max_stamina"><code>float</code> - <code>max_stamina</code><a class="headerlink" href="#float-max_stamina" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The current maximum usable stamina the player has.</li>
+<li>This fluctuates often, most notably from digging.</li>
+<li>This is denoted by the yellow and green sections of the stamina bar.</li>
+</ul>
+<h3 id="float-cur_stamina"><code>float</code> - <code>cur_stamina</code><a class="headerlink" href="#float-cur_stamina" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The current usable stamina the player has.</li>
+<li>This is used for actions like sprinting.</li>
+<li>This is denoted by the green section of the stamina bar.</li>
+</ul>
+<h3 id="float-sprint_drain_speed"><code>float</code> - <code>sprint_drain_speed</code><a class="headerlink" href="#float-sprint_drain_speed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>How fast the player's stamina drains while sprinting.</li>
+</ul>
+<h3 id="float-regen_speed"><code>float</code> - <code>regen_speed</code><a class="headerlink" href="#float-regen_speed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>How quickly the player's stamina regenerates when not sprinting.</li>
+</ul>
+<h3 id="bool-stamina_drained"><code>bool</code> - <code>stamina_drained</code><a class="headerlink" href="#bool-stamina_drained" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Whether the player's stamina has been drained.</li>
+<li>When the player's stamina is drained, they cannot mine or sprint.</li>
+<li>If the player's stamina is drained, the yellow and green sections of the stamina bar appear red.</li>
+</ul>
+<h2 id="method-descriptions">Method Descriptions<a class="headerlink" href="#method-descriptions" title="Permanent link">&para;</a></h2>
+<h3 id="void-updatedelta-float-draining-bool"><code>void</code> - <code>update(delta : float, draining : bool)</code><a class="headerlink" href="#void-updatedelta-float-draining-bool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updates the player's passive stamina.</li>
+<li>Regenerates if no stamina is being used, drains when sprinting.</li>
+<li>Keeps track of whether stamina has been drained or not.</li>
+</ul>
+<h3 id="void-add_curamount-float"><code>void</code> - <code>add_cur(amount : float)</code><a class="headerlink" href="#void-add_curamount-float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds <code>amount</code> to the player's current stamina.</li>
+<li>Despite the name being "add," this function is used for both addition and subtraction.</li>
+</ul>
+<h3 id="void-add_maxamount-float"><code>void</code> - <code>add_max(amount : float)</code><a class="headerlink" href="#void-add_maxamount-float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds <code>amount</code> to the player's maximum stamina.</li>
+<li>Despite the name being "add," this function is used for both addition and subtraction.</li>
+</ul>
+<h3 id="void-add_capamount-float"><code>void</code> - <code>add_cap(amount : float)</code><a class="headerlink" href="#void-add_capamount-float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds <code>amount</code> to the player's stamina cap.</li>
+<li>Despite the name being "add," this function is used for both addition and subtraction.</li>
+</ul>
+<h3 id="void-drain"><code>void</code> - <code>drain()</code><a class="headerlink" href="#void-drain" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets <code>stamina_drained</code> to true.</li>
+<li>Also sets <code>current_stamina</code> to 0.0.</li>
+</ul>
+<h3 id="void-restore"><code>void</code> - <code>restore()</code><a class="headerlink" href="#void-restore" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets <code>stamina_drained</code> to false.</li>
+<li>Also sets <code>current_stamina</code> to <code>max_stamina</code>.</li>
+</ul>
+<h2 id="signal-descriptions">Signal Descriptions<a class="headerlink" href="#signal-descriptions" title="Permanent link">&para;</a></h2>
+<h3 id="update_max_staminacap-float-max-float"><code>update_max_stamina(cap : float, max : float)</code><a class="headerlink" href="#update_max_staminacap-float-max-float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Signals an update the maximum stamina.</li>
+<li>For the player, this updates the HUD.</li>
+</ul>
+<h3 id="update_cur_staminacap-float-cur-float"><code>update_cur_stamina(cap : float, cur : float)</code><a class="headerlink" href="#update_cur_staminacap-float-cur-float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Signals an update to the current stamina.</li>
+<li>For the player, this updates the HUD.</li>
+</ul>
+<h3 id="update_stamina_draineddrained-bool"><code>update_stamina_drained(drained : bool)</code><a class="headerlink" href="#update_stamina_draineddrained-bool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Signals an update to the state of drained stamina.</li>
+<li>For the player, this updates the HUD.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

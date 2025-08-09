@@ -1,0 +1,32 @@
+img 
+{
+    clear: both;
+    vertical-align: middle;
+    width: 48px;
+    margin: 0 0 0.4rem 0.4rem;
+    image-rendering: pixelated;
+}
+
+img.auto
+{
+    clear: both;
+    vertical-align: middle;
+    width: auto;
+    image-rendering: auto;
+}
+
+a[href$=".png"] > img
+{
+    clear: both;
+    width: 64px;
+    margin: 0 0 0.4rem 0.4rem;
+    image-rendering: pixelated;
+}
+
+.col-md-9 img {
+    margin: 0;
+}
+
+td {
+    vertical-align: middle;
+}
